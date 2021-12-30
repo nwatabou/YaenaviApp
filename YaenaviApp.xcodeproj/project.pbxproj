@@ -49,6 +49,7 @@
 		3D1A6A9C2765C84A00748966 /* YaenaviAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaenaviAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1A6AA02765C84A00748966 /* YaenaviAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviAppUITests.swift; sourceTree = "<group>"; };
 		3D1A6AA22765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3D5D133A277DE2F700668E32 /* API */ = {isa = PBXFileReference; lastKnownFileType = folder; path = API; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		3D1A6A732765C84800748966 = {
 			isa = PBXGroup;
 			children = (
+				3D5D1339277DE2E100668E32 /* AppCore */,
 				3D1A6A7E2765C84900748966 /* YaenaviApp */,
 				3D1A6A952765C84A00748966 /* YaenaviAppTests */,
 				3D1A6A9F2765C84A00748966 /* YaenaviAppUITests */,
@@ -125,6 +127,14 @@
 				3D1A6AA22765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift */,
 			);
 			path = YaenaviAppUITests;
+			sourceTree = "<group>";
+		};
+		3D5D1339277DE2E100668E32 /* AppCore */ = {
+			isa = PBXGroup;
+			children = (
+				3D5D133A277DE2F700668E32 /* API */,
+			);
+			path = AppCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
