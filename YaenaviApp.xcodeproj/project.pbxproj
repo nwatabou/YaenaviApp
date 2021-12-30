@@ -215,6 +215,12 @@
 				Base,
 			);
 			mainGroup = 3D1A6A732765C84800748966;
+			packageReferences = (
+				3D5D1334277DDD7500668E32 /* XCRemoteSwiftPackageReference "Kanna" */,
+				3D5D1335277DDD8C00668E32 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				3D5D1336277DDDB000668E32 /* XCRemoteSwiftPackageReference "Action" */,
+				3D5D1337277DDDB800668E32 /* XCRemoteSwiftPackageReference "Unio" */,
+			);
 			productRefGroup = 3D1A6A7D2765C84900748966 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -624,6 +630,41 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D5D1334277DDD7500668E32 /* XCRemoteSwiftPackageReference "Kanna" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tid-kijyun/Kanna.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3D5D1335277DDD8C00668E32 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		3D5D1336277DDDB000668E32 /* XCRemoteSwiftPackageReference "Action" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/Action.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3D5D1337277DDDB800668E32 /* XCRemoteSwiftPackageReference "Unio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cats-oss/Unio.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 3D1A6A742765C84800748966 /* Project object */;
 }
