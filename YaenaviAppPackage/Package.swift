@@ -10,32 +10,24 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "API",
-            targets: ["API"]),
-        .library(
-            name: "Model",
-            targets: ["Model"]
-        )
+            name: "YaenaviAppPackage",
+            targets: ["YaenaviAppPackage"])
     ],
     dependencies: [
         .package(name: "Kanna", url: "https://github.com/tid-kijyun/Kanna.git", from: "5.2.2")
     ],
     targets: [
         .target(
-            name: "API",
+            name: "YaenaviAppPackage",
             dependencies: [
-                .product(name: "Kanna", package: "Kanna"),
-                .target(name: "Model")
+                "Kanna"
             ]
-        ),
-        .target(
-            name: "Model"
         ),
         // MARK: - Test Targets
         .testTarget(
-            name: "APITests",
+            name: "YaenaviAppPackageTests",
             dependencies: [
-                "API"
+                "YaenaviAppPackage"
             ]
         ),
     ]

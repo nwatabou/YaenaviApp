@@ -1,5 +1,5 @@
 //
-//  APITests.swift
+//  YaenaviAppPackageTests.swift
 //  
 //
 //  Created by nakanishi wataru on 2022/03/06.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-class APITests: XCTestCase {
+class YaenaviAppPackageTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
