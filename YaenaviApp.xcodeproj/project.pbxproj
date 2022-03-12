@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		3D1A6A802765C84900748966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6A7F2765C84900748966 /* AppDelegate.swift */; };
 		3D1A6A822765C84900748966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6A812765C84900748966 /* SceneDelegate.swift */; };
-		3D1A6A842765C84900748966 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6A832765C84900748966 /* ViewController.swift */; };
-		3D1A6A872765C84900748966 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1A6A852765C84900748966 /* Main.storyboard */; };
 		3D1A6A892765C84900748966 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1A6A882765C84900748966 /* Assets.xcassets */; };
 		3D1A6A8C2765C84900748966 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1A6A8A2765C84900748966 /* LaunchScreen.storyboard */; };
 		3D1A6A972765C84A00748966 /* YaenaviAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6A962765C84A00748966 /* YaenaviAppTests.swift */; };
 		3D1A6AA12765C84A00748966 /* YaenaviAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6AA02765C84A00748966 /* YaenaviAppUITests.swift */; };
 		3D1A6AA32765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6AA22765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift */; };
+		3D96D70027DCAFFE009D0202 /* YaenaviApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D6FF27DCAFFE009D0202 /* YaenaviApp.swift */; };
+		3D96D70227DCB01F009D0202 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D70127DCB01F009D0202 /* ContentView.swift */; };
+		3D96D70427DCB080009D0202 /* FerryRouteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D70327DCB080009D0202 /* FerryRouteListView.swift */; };
+		3D96D70627DCB0BE009D0202 /* InfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D70527DCB0BE009D0202 /* InfomationView.swift */; };
 		3DAD068627D4AC45007C8154 /* YaenaviAppPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAD068527D4AC45007C8154 /* YaenaviAppPackage */; };
 /* End PBXBuildFile section */
 
@@ -40,8 +42,6 @@
 		3D1A6A7C2765C84900748966 /* YaenaviApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaenaviApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1A6A7F2765C84900748966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D1A6A812765C84900748966 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D1A6A832765C84900748966 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3D1A6A862765C84900748966 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D1A6A882765C84900748966 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D1A6A8B2765C84900748966 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D1A6A8D2765C84900748966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +51,10 @@
 		3D1A6AA02765C84A00748966 /* YaenaviAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviAppUITests.swift; sourceTree = "<group>"; };
 		3D1A6AA22765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D442F4527D47F6200A2138D /* YaenaviAppPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = YaenaviAppPackage; sourceTree = "<group>"; };
+		3D96D6FF27DCAFFE009D0202 /* YaenaviApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviApp.swift; sourceTree = "<group>"; };
+		3D96D70127DCB01F009D0202 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3D96D70327DCB080009D0202 /* FerryRouteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerryRouteListView.swift; sourceTree = "<group>"; };
+		3D96D70527DCB0BE009D0202 /* InfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +110,13 @@
 			children = (
 				3D1A6A7F2765C84900748966 /* AppDelegate.swift */,
 				3D1A6A812765C84900748966 /* SceneDelegate.swift */,
-				3D1A6A832765C84900748966 /* ViewController.swift */,
-				3D1A6A852765C84900748966 /* Main.storyboard */,
 				3D1A6A882765C84900748966 /* Assets.xcassets */,
 				3D1A6A8A2765C84900748966 /* LaunchScreen.storyboard */,
 				3D1A6A8D2765C84900748966 /* Info.plist */,
+				3D96D6FF27DCAFFE009D0202 /* YaenaviApp.swift */,
+				3D96D70127DCB01F009D0202 /* ContentView.swift */,
+				3D96D70327DCB080009D0202 /* FerryRouteListView.swift */,
+				3D96D70527DCB0BE009D0202 /* InfomationView.swift */,
 			);
 			path = YaenaviApp;
 			sourceTree = "<group>";
@@ -251,7 +257,6 @@
 			files = (
 				3D1A6A8C2765C84900748966 /* LaunchScreen.storyboard in Resources */,
 				3D1A6A892765C84900748966 /* Assets.xcassets in Resources */,
-				3D1A6A872765C84900748966 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,9 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1A6A842765C84900748966 /* ViewController.swift in Sources */,
+				3D96D70027DCAFFE009D0202 /* YaenaviApp.swift in Sources */,
 				3D1A6A802765C84900748966 /* AppDelegate.swift in Sources */,
+				3D96D70227DCB01F009D0202 /* ContentView.swift in Sources */,
 				3D1A6A822765C84900748966 /* SceneDelegate.swift in Sources */,
+				3D96D70627DCB0BE009D0202 /* InfomationView.swift in Sources */,
+				3D96D70427DCB080009D0202 /* FerryRouteListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,14 +323,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3D1A6A852765C84900748966 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D1A6A862765C84900748966 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3D1A6A8A2765C84900748966 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -463,7 +463,6 @@
 				INFOPLIST_FILE = YaenaviApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,7 +475,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = YaenaviApp_development;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -493,7 +492,6 @@
 				INFOPLIST_FILE = YaenaviApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,7 +504,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = YaenaviApp_development;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
