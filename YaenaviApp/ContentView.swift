@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import RouteFeature
+
+import FerryRouteListFeature
 import OperationStatusFeature
 
 struct ContentView: View {
