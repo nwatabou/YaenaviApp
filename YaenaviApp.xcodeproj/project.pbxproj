@@ -16,8 +16,7 @@
 		3D1A6A972765C84A00748966 /* YaenaviAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6A962765C84A00748966 /* YaenaviAppTests.swift */; };
 		3D1A6AA12765C84A00748966 /* YaenaviAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6AA02765C84A00748966 /* YaenaviAppUITests.swift */; };
 		3D1A6AA32765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6AA22765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift */; };
-		3DAD067827D49BE6007C8154 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAD067727D49BE6007C8154 /* API */; };
-		3DAD067A27D49C0B007C8154 /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAD067927D49C0B007C8154 /* Model */; };
+		3D96D71227DCC633009D0202 /* AppCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3D96D71127DCC633009D0202 /* AppCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,7 @@
 		3D1A6A9C2765C84A00748966 /* YaenaviAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaenaviAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1A6AA02765C84A00748966 /* YaenaviAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviAppUITests.swift; sourceTree = "<group>"; };
 		3D1A6AA22765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3D442F4527D47F6200A2138D /* YaenaviAppPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = YaenaviAppPackage; sourceTree = "<group>"; };
+		3D96D71027DCC604009D0202 /* AppCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DAD067A27D49C0B007C8154 /* Model in Frameworks */,
-				3DAD067827D49BE6007C8154 /* API in Frameworks */,
+				3D96D71227DCC633009D0202 /* AppCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +82,7 @@
 		3D1A6A732765C84800748966 = {
 			isa = PBXGroup;
 			children = (
-				3D442F4527D47F6200A2138D /* YaenaviAppPackage */,
+				3D96D71027DCC604009D0202 /* AppCore */,
 				3D1A6A7E2765C84900748966 /* YaenaviApp */,
 				3D1A6A952765C84A00748966 /* YaenaviAppTests */,
 				3D1A6A9F2765C84A00748966 /* YaenaviAppUITests */,
@@ -158,8 +156,7 @@
 			);
 			name = YaenaviApp;
 			packageProductDependencies = (
-				3DAD067727D49BE6007C8154 /* API */,
-				3DAD067927D49C0B007C8154 /* Model */,
+				3D96D71127DCC633009D0202 /* AppCore */,
 			);
 			productName = YaenaviApp;
 			productReference = 3D1A6A7C2765C84900748966 /* YaenaviApp.app */;
@@ -235,9 +232,6 @@
 			mainGroup = 3D1A6A732765C84800748966;
 			packageReferences = (
 				3D5D1334277DDD7500668E32 /* XCRemoteSwiftPackageReference "Kanna" */,
-				3D5D1335277DDD8C00668E32 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				3D5D1336277DDDB000668E32 /* XCRemoteSwiftPackageReference "Action" */,
-				3D5D1337277DDDB800668E32 /* XCRemoteSwiftPackageReference "Unio" */,
 			);
 			productRefGroup = 3D1A6A7D2765C84900748966 /* Products */;
 			projectDirPath = "";
@@ -662,40 +656,12 @@
 				kind = branch;
 			};
 		};
-		3D5D1335277DDD8C00668E32 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		3D5D1336277DDDB000668E32 /* XCRemoteSwiftPackageReference "Action" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/Action.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		3D5D1337277DDDB800668E32 /* XCRemoteSwiftPackageReference "Unio" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cats-oss/Unio.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3DAD067727D49BE6007C8154 /* API */ = {
+		3D96D71127DCC633009D0202 /* AppCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = API;
-		};
-		3DAD067927D49C0B007C8154 /* Model */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Model;
+			productName = AppCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

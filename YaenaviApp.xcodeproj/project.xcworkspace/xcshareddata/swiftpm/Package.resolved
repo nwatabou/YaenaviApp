@@ -2,38 +2,11 @@
   "object": {
     "pins": [
       {
-        "package": "Action",
-        "repositoryURL": "https://github.com/RxSwiftCommunity/Action.git",
-        "state": {
-          "branch": "master",
-          "revision": "90259f7462a07e8f26bc8300ea16bcdf73ca7827",
-          "version": null
-        }
-      },
-      {
         "package": "Kanna",
         "repositoryURL": "https://github.com/tid-kijyun/Kanna.git",
         "state": {
           "branch": "master",
           "revision": "bf19cf5f5fff3924cc2b63dd32732bce28b4c748",
-          "version": null
-        }
-      },
-      {
-        "package": "RxSwift",
-        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
-        "state": {
-          "branch": "main",
-          "revision": "b48f2e9536cd985d912126709b97bd743e58c8fc",
-          "version": null
-        }
-      },
-      {
-        "package": "Unio",
-        "repositoryURL": "https://github.com/cats-oss/Unio.git",
-        "state": {
-          "branch": "master",
-          "revision": "2e902bb0390f04c53e6771977fd622d1242167b5",
           "version": null
         }
       }

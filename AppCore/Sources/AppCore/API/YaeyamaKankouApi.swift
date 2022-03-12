@@ -7,7 +7,6 @@
 
 import Foundation
 import Kanna
-import Model
 
 public final class YaeyamaKankouApi: FerryApiProtocol {
     private enum Const {
