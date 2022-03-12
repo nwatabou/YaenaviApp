@@ -18,7 +18,7 @@
 		3D96D70227DCB01F009D0202 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D70127DCB01F009D0202 /* ContentView.swift */; };
 		3D96D70C27DCC20C009D0202 /* OperationStatusFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 3D96D70B27DCC20C009D0202 /* OperationStatusFeature */; };
 		3D96D70F27DCC3F7009D0202 /* FerryRouteListFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 3D96D70E27DCC3F7009D0202 /* FerryRouteListFeature */; };
-		3DAD068627D4AC45007C8154 /* YaenaviAppPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAD068527D4AC45007C8154 /* YaenaviAppPackage */; };
+		3D96D71227DCC633009D0202 /* AppCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3D96D71127DCC633009D0202 /* AppCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +50,11 @@
 		3D1A6A9C2765C84A00748966 /* YaenaviAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaenaviAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1A6AA02765C84A00748966 /* YaenaviAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviAppUITests.swift; sourceTree = "<group>"; };
 		3D1A6AA22765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3D442F4527D47F6200A2138D /* YaenaviAppPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = YaenaviAppPackage; sourceTree = "<group>"; };
 		3D96D6FF27DCAFFE009D0202 /* YaenaviApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviApp.swift; sourceTree = "<group>"; };
 		3D96D70127DCB01F009D0202 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D96D70A27DCC1D1009D0202 /* OperationStatusFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OperationStatusFeature; path = ../../OperationStatusFeature; sourceTree = "<group>"; };
 		3D96D70D27DCC3B5009D0202 /* FerryRouteListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FerryRouteListFeature; path = ../../FerryRouteListFeature; sourceTree = "<group>"; };
+		3D96D71027DCC604009D0202 /* AppCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 			files = (
 				3D96D70F27DCC3F7009D0202 /* FerryRouteListFeature in Frameworks */,
 				3D96D70C27DCC20C009D0202 /* OperationStatusFeature in Frameworks */,
-				3DAD068627D4AC45007C8154 /* YaenaviAppPackage in Frameworks */,
+				3D96D71227DCC633009D0202 /* AppCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			children = (
 				3D96D70D27DCC3B5009D0202 /* FerryRouteListFeature */,
 				3D96D70A27DCC1D1009D0202 /* OperationStatusFeature */,
-				3D442F4527D47F6200A2138D /* YaenaviAppPackage */,
+				3D96D71027DCC604009D0202 /* AppCore */,
 				3D1A6A7E2765C84900748966 /* YaenaviApp */,
 				3D1A6A952765C84A00748966 /* YaenaviAppTests */,
 				3D1A6A9F2765C84A00748966 /* YaenaviAppUITests */,
@@ -164,9 +164,9 @@
 			);
 			name = YaenaviApp;
 			packageProductDependencies = (
-				3DAD068527D4AC45007C8154 /* YaenaviAppPackage */,
 				3D96D70B27DCC20C009D0202 /* OperationStatusFeature */,
 				3D96D70E27DCC3F7009D0202 /* FerryRouteListFeature */,
+				3D96D71127DCC633009D0202 /* AppCore */,
 			);
 			productName = YaenaviApp;
 			productReference = 3D1A6A7C2765C84900748966 /* YaenaviApp.app */;
@@ -667,9 +667,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = FerryRouteListFeature;
 		};
-		3DAD068527D4AC45007C8154 /* YaenaviAppPackage */ = {
+		3D96D71127DCC633009D0202 /* AppCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = YaenaviAppPackage;
+			productName = AppCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
