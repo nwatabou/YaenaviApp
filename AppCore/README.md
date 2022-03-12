@@ -1,3 +1,3 @@
-# YaenaviAppPackage
+# AppCore
 
 A description of this package.
