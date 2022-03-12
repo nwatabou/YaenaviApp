@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import RouteFeature
+import OperationStatusFeature
 
 struct ContentView: View {
     var body: some View {
@@ -17,7 +19,7 @@ struct ContentView: View {
                         Text("航路")
                     }
                 }
-            InfomationView()
+            OperationStatusView()
                 .tabItem {
                     VStack {
                         Image(systemName: "info.circle")

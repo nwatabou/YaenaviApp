@@ -16,8 +16,8 @@
 		3D1A6AA32765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6AA22765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift */; };
 		3D96D70027DCAFFE009D0202 /* YaenaviApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D6FF27DCAFFE009D0202 /* YaenaviApp.swift */; };
 		3D96D70227DCB01F009D0202 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D70127DCB01F009D0202 /* ContentView.swift */; };
-		3D96D70427DCB080009D0202 /* FerryRouteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D70327DCB080009D0202 /* FerryRouteListView.swift */; };
-		3D96D70627DCB0BE009D0202 /* InfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D70527DCB0BE009D0202 /* InfomationView.swift */; };
+		3D96D70927DCB4C2009D0202 /* RouteFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 3D96D70827DCB4C2009D0202 /* RouteFeature */; };
+		3D96D70C27DCC20C009D0202 /* OperationStatusFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 3D96D70B27DCC20C009D0202 /* OperationStatusFeature */; };
 		3DAD068627D4AC45007C8154 /* YaenaviAppPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAD068527D4AC45007C8154 /* YaenaviAppPackage */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +53,8 @@
 		3D442F4527D47F6200A2138D /* YaenaviAppPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = YaenaviAppPackage; sourceTree = "<group>"; };
 		3D96D6FF27DCAFFE009D0202 /* YaenaviApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviApp.swift; sourceTree = "<group>"; };
 		3D96D70127DCB01F009D0202 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3D96D70327DCB080009D0202 /* FerryRouteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerryRouteListView.swift; sourceTree = "<group>"; };
-		3D96D70527DCB0BE009D0202 /* InfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationView.swift; sourceTree = "<group>"; };
+		3D96D70727DCB47F009D0202 /* RouteFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = RouteFeature; path = ../../RouteFeature; sourceTree = "<group>"; };
+		3D96D70A27DCC1D1009D0202 /* OperationStatusFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OperationStatusFeature; path = ../../OperationStatusFeature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D96D70C27DCC20C009D0202 /* OperationStatusFeature in Frameworks */,
 				3DAD068627D4AC45007C8154 /* YaenaviAppPackage in Frameworks */,
+				3D96D70927DCB4C2009D0202 /* RouteFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,8 @@
 		3D1A6A732765C84800748966 = {
 			isa = PBXGroup;
 			children = (
+				3D96D70A27DCC1D1009D0202 /* OperationStatusFeature */,
+				3D96D70727DCB47F009D0202 /* RouteFeature */,
 				3D442F4527D47F6200A2138D /* YaenaviAppPackage */,
 				3D1A6A7E2765C84900748966 /* YaenaviApp */,
 				3D1A6A952765C84A00748966 /* YaenaviAppTests */,
@@ -115,8 +119,6 @@
 				3D1A6A8D2765C84900748966 /* Info.plist */,
 				3D96D6FF27DCAFFE009D0202 /* YaenaviApp.swift */,
 				3D96D70127DCB01F009D0202 /* ContentView.swift */,
-				3D96D70327DCB080009D0202 /* FerryRouteListView.swift */,
-				3D96D70527DCB0BE009D0202 /* InfomationView.swift */,
 			);
 			path = YaenaviApp;
 			sourceTree = "<group>";
@@ -163,6 +165,8 @@
 			name = YaenaviApp;
 			packageProductDependencies = (
 				3DAD068527D4AC45007C8154 /* YaenaviAppPackage */,
+				3D96D70827DCB4C2009D0202 /* RouteFeature */,
+				3D96D70B27DCC20C009D0202 /* OperationStatusFeature */,
 			);
 			productName = YaenaviApp;
 			productReference = 3D1A6A7C2765C84900748966 /* YaenaviApp.app */;
@@ -285,8 +289,6 @@
 				3D1A6A802765C84900748966 /* AppDelegate.swift in Sources */,
 				3D96D70227DCB01F009D0202 /* ContentView.swift in Sources */,
 				3D1A6A822765C84900748966 /* SceneDelegate.swift in Sources */,
-				3D96D70627DCB0BE009D0202 /* InfomationView.swift in Sources */,
-				3D96D70427DCB080009D0202 /* FerryRouteListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +659,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3D96D70827DCB4C2009D0202 /* RouteFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RouteFeature;
+		};
+		3D96D70B27DCC20C009D0202 /* OperationStatusFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OperationStatusFeature;
+		};
 		3DAD068527D4AC45007C8154 /* YaenaviAppPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = YaenaviAppPackage;
