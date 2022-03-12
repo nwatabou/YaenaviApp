@@ -52,8 +52,8 @@
 		3D1A6AA22765C84A00748966 /* YaenaviAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D96D6FF27DCAFFE009D0202 /* YaenaviApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaenaviApp.swift; sourceTree = "<group>"; };
 		3D96D70127DCB01F009D0202 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3D96D70A27DCC1D1009D0202 /* OperationStatusFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OperationStatusFeature; path = ../../OperationStatusFeature; sourceTree = "<group>"; };
-		3D96D70D27DCC3B5009D0202 /* FerryRouteListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FerryRouteListFeature; path = ../../FerryRouteListFeature; sourceTree = "<group>"; };
+		3D96D70A27DCC1D1009D0202 /* OperationStatusFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = OperationStatusFeature; sourceTree = "<group>"; };
+		3D96D70D27DCC3B5009D0202 /* FerryRouteListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FerryRouteListFeature; sourceTree = "<group>"; };
 		3D96D71027DCC604009D0202 /* AppCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
