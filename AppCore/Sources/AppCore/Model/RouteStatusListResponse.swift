@@ -21,7 +21,10 @@ public struct RouteStatusListResponse {
     }
 }
 
-public struct RouteStatusResponse {
+public struct RouteStatusResponse: Hashable, Identifiable {
+    public typealias ID = String
+
+    public let id: ID
     public let name: String
     public let status: String
 
@@ -29,6 +32,7 @@ public struct RouteStatusResponse {
         name: String,
         status: String
     ) {
+        self.id = name
         self.name = name
         self.status = status
     }
