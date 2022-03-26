@@ -8,35 +8,32 @@
 import SwiftUI
 import AppCore
 
-public struct FerryRouteListView: View {
-    // TODO: Temporary data
-    private let routeList: [FerryRouteViewData] = [
-        .init(name: "波照間航路", status: "通常運航"),
-        .init(name: "上原航路", status: "通常運航"),
-        .init(name: "鳩間航路", status: "通常運航"),
-        .init(name: "大原航路", status: "通常運航"),
-        .init(name: "竹富航路", status: "通常運航"),
-        .init(name: "小浜航路", status: "通常運航"),
-        .init(name: "黒島航路", status: "通常運航")
-    ]
+struct FerryRouteListView: View {
+    @ObservedObject
+    private var viewModel: FerryRouteListViewModel
 
-    public init() {}
+    init(
+        viewModel: FerryRouteListViewModel
+    ) {
+        self.viewModel = viewModel
+    }
 
-    public var body: some View {
-        NavigationView {
-            List(routeList) { route in
-                NavigationLink(
-                    destination: {},
-                    label: {
-                        RouteView(
-                            routeName: route.name,
-                            status: route.status
-                        )
-                    }
-                )
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading) {
+                ForEach(viewModel.state.routeList, id: \.self) { route in
+                    RouteView(
+                        routeName: route.name,
+                        status: route.status
+                    )
+                }
             }
+            .padding(.all, 16)
             .listStyle(.plain)
             .navigationTitle("航路の選択")
         }
+        .onAppear(perform: {
+            viewModel.action.onAppear.send()
+        })
     }
 }

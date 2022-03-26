@@ -13,7 +13,7 @@ import OperationStatusFeature
 struct ContentView: View {
     var body: some View {
         TabView {
-            FerryRouteListView()
+            FerryRouteListViewBuilder.build()
                 .tabItem {
                     VStack {
                         Image(systemName: "mappin.circle")
