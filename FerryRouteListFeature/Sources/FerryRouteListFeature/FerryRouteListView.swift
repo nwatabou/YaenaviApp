@@ -10,7 +10,7 @@ import AppCore
 
 public struct FerryRouteListView: View {
     // TODO: Temporary data
-    private let routeList: [RouteStatusResponse] = [
+    private let routeList: [FerryRouteViewData] = [
         .init(name: "波照間航路", status: "通常運航"),
         .init(name: "上原航路", status: "通常運航"),
         .init(name: "鳩間航路", status: "通常運航"),
