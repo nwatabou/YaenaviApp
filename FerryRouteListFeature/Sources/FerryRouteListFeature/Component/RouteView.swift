@@ -20,18 +20,20 @@ struct RouteView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack(alignment: .center, spacing: 8) {
-                Text(routeName)
-                    .font(.title2)
-                Spacer()
+        HStack(alignment: .center) {
+            VStack(alignment: .leading) {
+                HStack(alignment: .center, spacing: 8) {
+                    Text(routeName)
+                        .font(.title2)
+                    Spacer()
+                }
+                HStack(alignment: .center, spacing: 8) {
+                    Text(status)
+                        .font(.caption)
+                    Spacer()
+                }
             }
-            HStack(alignment: .center, spacing: 8) {
-                Text(status)
-                    .font(.caption)
-                Spacer()
-            }
+            Image(systemName: "chevron.right")
         }
-        .padding([.leading, .trailing], 16)
     }
 }
