@@ -19,8 +19,8 @@ struct FerryRouteListView: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
+        NavigationView {
+            List {
                 ForEach(viewModel.state.routeList, id: \.self) { route in
                     RouteView(
                         routeName: route.name,
@@ -28,7 +28,6 @@ struct FerryRouteListView: View {
                     )
                 }
             }
-            .padding(.all, 16)
             .listStyle(.plain)
             .navigationTitle("航路の選択")
         }

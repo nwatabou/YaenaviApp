@@ -21,10 +21,17 @@ struct RouteView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(routeName)
-                .font(.title2)
-            Text(status)
-                .font(.caption)
+            HStack(alignment: .center, spacing: 8) {
+                Text(routeName)
+                    .font(.title2)
+                Spacer()
+            }
+            HStack(alignment: .center, spacing: 8) {
+                Text(status)
+                    .font(.caption)
+                Spacer()
+            }
         }
+        .padding([.leading, .trailing], 16)
     }
 }
