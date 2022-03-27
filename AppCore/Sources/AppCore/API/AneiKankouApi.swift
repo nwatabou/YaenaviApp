@@ -13,6 +13,8 @@ public final class AneiKankouApi: FerryApiProtocol {
         static let aneiKankouDataUrlString = "https://aneikankou.co.jp/condition"
     }
 
+    public init() {}
+
     public func fetchRouteStatuses(
         completion: @escaping (Result<RouteStatusListResponse, Error>) -> Void
     ) {

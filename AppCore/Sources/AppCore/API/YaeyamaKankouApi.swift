@@ -16,6 +16,8 @@ public final class YaeyamaKankouApi: FerryApiProtocol {
         static let cancellationStatusMark = "×"
     }
 
+    public init() {}
+
     public func fetchRouteStatuses(
         completion: @escaping (Result<RouteStatusListResponse, Error>) -> Void
     ) {

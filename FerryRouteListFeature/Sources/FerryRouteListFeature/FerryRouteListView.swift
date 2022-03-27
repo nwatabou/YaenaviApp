@@ -6,11 +6,33 @@
 //
 
 import SwiftUI
+import AppCore
 
-public struct FerryRouteListView: View {
-    public init() {}
+struct FerryRouteListView: View {
+    @ObservedObject
+    private var viewModel: FerryRouteListViewModel
 
-    public var body: some View {
-        Text("display ferry route list")
+    init(
+        viewModel: FerryRouteListViewModel
+    ) {
+        self.viewModel = viewModel
+    }
+
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(viewModel.state.routeList, id: \.self) { route in
+                    RouteView(
+                        routeName: route.name,
+                        status: route.status
+                    )
+                }
+            }
+            .listStyle(.plain)
+            .navigationTitle("航路の選択")
+        }
+        .onAppear(perform: {
+            viewModel.action.onAppear.send()
+        })
     }
 }
