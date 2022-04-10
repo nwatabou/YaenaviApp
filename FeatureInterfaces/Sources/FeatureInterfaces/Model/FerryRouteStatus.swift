@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// 各航路の運行状況
 public enum FerryRouteStatus {
@@ -21,6 +22,17 @@ public enum FerryRouteStatus {
             return "一部欠航"
         case .outOfService:
             return "全便欠航"
+        }
+    }
+
+    public var textColor: UIColor {
+        switch self {
+        case .normal:
+            return .systemBlue
+        case .partial:
+            return .systemYellow
+        case .outOfService:
+            return .systemRed
         }
     }
 

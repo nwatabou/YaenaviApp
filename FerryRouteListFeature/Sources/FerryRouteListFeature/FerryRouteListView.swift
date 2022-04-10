@@ -26,7 +26,7 @@ struct FerryRouteListView: View {
                 ForEach(viewModel.state.routeList, id: \.self) { viewData in
                     RouteView(
                         routeName: viewData.route.displayName,
-                        status: viewData.status.displayText
+                        status: viewData.status
                     )
                 }
             }

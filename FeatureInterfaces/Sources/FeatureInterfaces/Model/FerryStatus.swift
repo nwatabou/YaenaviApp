@@ -12,6 +12,7 @@ import UIKit
 public enum FerryStatus {
     case normal
     case outOfService
+    case unknown
 
     public var displayMark: UIImage? {
         switch self {
@@ -19,10 +20,23 @@ public enum FerryStatus {
             return UIImage(systemName: "circle")
         case .outOfService:
             return UIImage(systemName: "multiply")
+        case .unknown:
+            return UIImage(systemName: "minus")
         }
     }
 
-    public init?(rawValue: String) {
+    public var textColor: UIColor {
+        switch self {
+        case .normal:
+            return .systemBlue
+        case .outOfService:
+            return .systemRed
+        case .unknown:
+            return .systemGray
+        }
+    }
+
+    public init(rawValue: String) {
         switch rawValue {
         case "〇", // 八重山観光の表記
              "◯": // 安永観光の表記
@@ -31,7 +45,7 @@ public enum FerryStatus {
              "✕": // 安永観光の表記
             self = .outOfService
         default:
-            return nil
+            self = .unknown
         }
     }
 }
