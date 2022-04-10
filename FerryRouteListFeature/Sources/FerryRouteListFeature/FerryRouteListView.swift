@@ -8,6 +8,8 @@
 import SwiftUI
 import AppCore
 
+import FeatureInterfaces
+
 struct FerryRouteListView: View {
     @ObservedObject
     private var viewModel: FerryRouteListViewModel
@@ -21,10 +23,10 @@ struct FerryRouteListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.state.routeList, id: \.self) { route in
+                ForEach(viewModel.state.routeList, id: \.self) { viewData in
                     RouteView(
-                        routeName: route.name,
-                        status: route.status
+                        routeName: viewData.route.displayName,
+                        status: viewData.status.displayText
                     )
                 }
             }

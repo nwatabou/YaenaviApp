@@ -47,16 +47,20 @@ public final class AneiKankouApi: FerryApiProtocol {
                     case "operation_normal":
                         return .init(
                             name: routeName,
-                            status: "normal"
+                            status: "operation_normal"
                         )
 
                     case "operation_suspension":
                         return .init(
                             name: routeName,
-                            status: "suspension"
+                            status: "operation_suspension"
                         )
 
-                    // TODO: add status
+                    case "operation_partial":
+                        return .init(
+                            name: routeName,
+                            status: "operation_partial"
+                        )
                     default:
                         return nil
                     }

@@ -8,6 +8,7 @@
 import Combine
 import Foundation
 
+import FeatureInterfaces
 import AppCore
 
 protocol FerryRouteRepositoryProtocol {
@@ -33,14 +34,28 @@ final class FerryRouteRepository: FerryRouteRepositoryProtocol {
                 fetchYaeyamaKankouFerryRoute()
             )
             .map { aneiKankouRoute, yaeyamaKankouRoute -> [FerryRouteViewData] in
-                let aneiKankouRoute_ = aneiKankouRoute.map {
-                    FerryRouteViewData(name: $0.name, status: $0.status)
-                }
-                let yaeyamaKankouRoute_ = yaeyamaKankouRoute.map {
-                    FerryRouteViewData(name: $0.name, status: $0.status)
-                }
-                let routeList = aneiKankouRoute_ + yaeyamaKankouRoute_
-                return Array(Set(routeList))
+                let aneiKankouRoute_ = aneiKankouRoute
+                    .compactMap { route -> FerryRouteViewData? in
+                        guard let ferryRoute = FerryRoute(rawValue: route.name),
+                              let status = FerryRouteStatus(rawValue: route.status) else {
+                              return nil
+                          }
+                        return FerryRouteViewData(route: ferryRoute, status: status)
+                    }
+                let yaeyamaKankouRoute_ = yaeyamaKankouRoute
+                    .compactMap { route -> FerryRouteViewData? in
+                        guard let ferryRoute = FerryRoute(rawValue: route.name),
+                              let status = FerryRouteStatus(rawValue: route.status) else {
+                              return nil
+                          }
+                        return FerryRouteViewData(route: ferryRoute, status: status)
+                    }
+                var routeList = aneiKankouRoute_ + yaeyamaKankouRoute_
+                // 重複を除外
+                routeList = Array(Set(routeList))
+                // 並べ替え
+                routeList = routeList.sorted(by: { $0.route.sortOrder < $1.route.sortOrder })
+                return routeList
             }
             .eraseToAnyPublisher()
     }

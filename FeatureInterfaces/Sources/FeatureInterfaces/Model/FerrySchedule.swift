@@ -7,12 +7,13 @@
 
 import Foundation
 
+/// 便ごとの情報
 public struct FerrySchedule {
-    public let status: RouteStatus
+    public let status: FerryStatus
     public let time: String
 
     public init(
-        status: RouteStatus,
+        status: FerryStatus,
         time: String
     ) {
         self.status = status

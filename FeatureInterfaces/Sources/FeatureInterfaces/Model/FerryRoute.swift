@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// 航路
 public enum FerryRoute {
     case taketomi
     case kohama
