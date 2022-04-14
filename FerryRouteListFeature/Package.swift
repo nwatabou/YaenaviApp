@@ -15,6 +15,7 @@ let package = Package(
             targets: ["FerryRouteListFeature"]),
     ],
     dependencies: [
+        .package(name: "FeatureInterfaces", path: "../FeatureInterfaces"),
         .package(name: "AppCore", path: "../AppCore")
     ],
     targets: [

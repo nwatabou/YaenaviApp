@@ -7,19 +7,21 @@
 
 import Foundation
 
+import FeatureInterfaces
+
 struct FerryRouteViewData: Hashable, Identifiable {
     typealias ID = String
 
     let id: ID
-    let name: String
-    let status: String
+    let route: FerryRoute
+    let status: FerryRouteStatus
 
     init(
-        name: String,
-        status: String
+        route: FerryRoute,
+        status: FerryRouteStatus
     ) {
-        self.id = name
-        self.name = name
+        self.id = route.displayName
+        self.route = route
         self.status = status
     }
 }

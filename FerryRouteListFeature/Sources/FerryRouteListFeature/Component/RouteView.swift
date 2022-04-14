@@ -7,13 +7,15 @@
 
 import SwiftUI
 
+import FeatureInterfaces
+
 struct RouteView: View {
     private let routeName: String
-    private let status: String
+    private let status: FerryRouteStatus
 
     init(
         routeName: String,
-        status: String
+        status: FerryRouteStatus
     ) {
         self.routeName = routeName
         self.status = status
@@ -28,8 +30,9 @@ struct RouteView: View {
                     Spacer()
                 }
                 HStack(alignment: .center, spacing: 8) {
-                    Text(status)
+                    Text(status.displayText)
                         .font(.caption)
+                        .foregroundColor(Color(status.textColor))
                     Spacer()
                 }
             }
