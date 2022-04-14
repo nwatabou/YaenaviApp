@@ -7,11 +7,16 @@
 
 import SwiftUI
 
+import FeatureInterfaces
+
 @main
 struct YaenaviApp: App {
+
+    private let featureProvider: FeatureProviderProtocol = FeatureProvider()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(featureProvider: featureProvider)
         }
     }
 }

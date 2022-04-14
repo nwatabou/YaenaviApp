@@ -7,20 +7,27 @@
 
 import SwiftUI
 
-import FerryRouteListFeature
-import OperationStatusFeature
+import FeatureInterfaces
 
 struct ContentView: View {
+    let featureProvider: FeatureProviderProtocol
+
+    init(
+        featureProvider: FeatureProviderProtocol
+    ) {
+        self.featureProvider = featureProvider
+    }
+
     var body: some View {
         TabView {
-            FerryRouteListViewBuilder.build()
+            featureProvider.build(FerryRouteListViewRequest())
                 .tabItem {
                     VStack {
                         Image(systemName: "mappin.circle")
                         Text("航路")
                     }
                 }
-            OperationStatusView()
+            featureProvider.build(OperationStatusViewRequest())
                 .tabItem {
                     VStack {
                         Image(systemName: "info.circle")
@@ -28,11 +35,5 @@ struct ContentView: View {
                     }
                 }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

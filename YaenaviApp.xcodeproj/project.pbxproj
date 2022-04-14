@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0D6AFF28085BB700EBA5AE /* FeatureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0D6AFE28085BB700EBA5AE /* FeatureProvider.swift */; };
 		3D1A6A802765C84900748966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6A7F2765C84900748966 /* AppDelegate.swift */; };
 		3D1A6A822765C84900748966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A6A812765C84900748966 /* SceneDelegate.swift */; };
 		3D1A6A892765C84900748966 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1A6A882765C84900748966 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0D6AFE28085BB700EBA5AE /* FeatureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureProvider.swift; sourceTree = "<group>"; };
 		3D1A6A7C2765C84900748966 /* YaenaviApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaenaviApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1A6A7F2765C84900748966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D1A6A812765C84900748966 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D0D6AFD28085BA700EBA5AE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3D0D6AFE28085BB700EBA5AE /* FeatureProvider.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		3D1A6A732765C84800748966 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 		3D1A6A7E2765C84900748966 /* YaenaviApp */ = {
 			isa = PBXGroup;
 			children = (
+				3D0D6AFD28085BA700EBA5AE /* Utility */,
 				3D1A6A7F2765C84900748966 /* AppDelegate.swift */,
 				3D1A6A812765C84900748966 /* SceneDelegate.swift */,
 				3D1A6A882765C84900748966 /* Assets.xcassets */,
@@ -292,6 +303,7 @@
 			files = (
 				3D96D70027DCAFFE009D0202 /* YaenaviApp.swift in Sources */,
 				3D1A6A802765C84900748966 /* AppDelegate.swift in Sources */,
+				3D0D6AFF28085BB700EBA5AE /* FeatureProvider.swift in Sources */,
 				3D96D70227DCB01F009D0202 /* ContentView.swift in Sources */,
 				3D1A6A822765C84900748966 /* SceneDelegate.swift in Sources */,
 			);
