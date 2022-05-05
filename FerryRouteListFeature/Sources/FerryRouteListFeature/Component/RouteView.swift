@@ -36,7 +36,6 @@ struct RouteView: View {
                     Spacer()
                 }
             }
-            Image(systemName: "chevron.right")
         }
     }
 }

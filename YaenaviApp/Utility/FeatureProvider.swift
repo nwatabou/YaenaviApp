@@ -11,6 +11,7 @@ import SwiftUI
 import FeatureInterfaces
 import FerryRouteListFeature
 import OperationStatusFeature
+import FerryScheduleListFeature
 
 class FeatureProvider: FeatureProviderProtocol {
     init() {}
@@ -21,7 +22,9 @@ class FeatureProvider: FeatureProviderProtocol {
 extension FeatureProvider {
 
     func build(_ request: FerryRouteListViewRequest) -> AnyView {
-        let view = FerryRouteListViewBuilder.build()
+        let view = FerryRouteListViewBuilder.build(
+            featureProvider: self
+        )
         return AnyView(view)
     }
 }
@@ -32,6 +35,15 @@ extension FeatureProvider {
     func build(_ request: OperationStatusViewRequest) -> AnyView {
         // TODO: use Builder
         let view = OperationStatusView()
+        return AnyView(view)
+    }
+}
+
+// MARK: - For FerryScheduleListFeature
+
+extension FeatureProvider {
+    func build(_ request: FerryScheduleListViewRequest) -> AnyView {
+        let view = FerryScheduleListViewBuilder.build()
         return AnyView(view)
     }
 }
