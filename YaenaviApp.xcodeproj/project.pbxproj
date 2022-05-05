@@ -263,6 +263,7 @@
 			mainGroup = 3D1A6A732765C84800748966;
 			packageReferences = (
 				3D5D1334277DDD7500668E32 /* XCRemoteSwiftPackageReference "Kanna" */,
+				3D5813B42823B8DC00DA0106 /* XCRemoteSwiftPackageReference "Parchment" */,
 			);
 			productRefGroup = 3D1A6A7D2765C84900748966 /* Products */;
 			projectDirPath = "";
@@ -670,6 +671,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3D5813B42823B8DC00DA0106 /* XCRemoteSwiftPackageReference "Parchment" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rechsteiner/Parchment";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		3D5D1334277DDD7500668E32 /* XCRemoteSwiftPackageReference "Kanna" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tid-kijyun/Kanna.git";

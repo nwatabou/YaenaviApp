@@ -32,7 +32,7 @@ struct RouteView: View {
                 HStack(alignment: .center, spacing: 8) {
                     Text(status.displayText)
                         .font(.caption)
-                        .foregroundColor(Color(status.textColor))
+                        .foregroundColor(status.textColor)
                     Spacer()
                 }
             }

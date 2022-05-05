@@ -15,7 +15,7 @@ let package = Package(
             targets: ["AppCore"]),
     ],
     dependencies: [
-        .package(name: "Kanna", url: "https://github.com/tid-kijyun/Kanna.git", from: "5.2.2")
+        .package(url: "https://github.com/tid-kijyun/Kanna.git", from: "5.2.2")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
