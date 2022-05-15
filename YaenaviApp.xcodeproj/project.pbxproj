@@ -60,7 +60,7 @@
 		3D96D70D27DCC3B5009D0202 /* FerryRouteListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FerryRouteListFeature; sourceTree = "<group>"; };
 		3D96D71027DCC604009D0202 /* AppCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppCore; sourceTree = "<group>"; };
 		3DE587722802AE0000947CFA /* FeatureInterfaces */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FeatureInterfaces; sourceTree = "<group>"; };
-		3DEFC5462821393A00B0118B /* FerryScheduleListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FerryScheduleListFeature; path = ../../FerryScheduleListFeature; sourceTree = "<group>"; };
+		3DEFC5462821393A00B0118B /* FerryScheduleListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FerryScheduleListFeature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

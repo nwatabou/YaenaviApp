@@ -74,7 +74,8 @@ public final class YaeyamaKankouApi: FerryApiProtocol {
     }
 
     public func fetchRouteScheduleList(
-        completion: @escaping (Result<[RouteScheduleListResponse], Error>) -> Void
+        routePrefix: String,
+        completion: @escaping (Result<RouteScheduleListResponse, Error>) -> Void
     ) {
         guard let url = URL(string: Const.yaeyamaKankouScheduleDataUrlString) else {
             // TODO: do failure closure
@@ -162,7 +163,11 @@ public final class YaeyamaKankouApi: FerryApiProtocol {
                         returnRouteSchedules: returnRouteSchedules
                     )
             }
-            completion(.success(routes))
+            guard let route = routes.first(where: { $0.name.contains(routePrefix) }) else {
+                // TODO: do failure closure
+                return
+            }
+            completion(.success(route))
         }
         task.resume()
     }

@@ -77,7 +77,8 @@ public final class AneiKankouApi: FerryApiProtocol {
     }
 
     public func fetchRouteScheduleList(
-        completion: @escaping (Result<[RouteScheduleListResponse], Error>) -> Void
+        routePrefix: String,
+        completion: @escaping (Result<RouteScheduleListResponse, Error>) -> Void
     ) {
         guard let aneiKankouUrl = URL(string: Const.aneiKankouDataUrlString) else {
             // TODO: do failure closure
@@ -96,7 +97,7 @@ public final class AneiKankouApi: FerryApiProtocol {
                     return
             }
 
-            let routeScheduleList: [RouteScheduleListResponse] = html
+            let routes: [RouteScheduleListResponse] = html
                 .xpath("//div[@class='condition_item']")
                 .compactMap { route in
                     let outwardRouteIndex: Int = 0
@@ -148,7 +149,11 @@ public final class AneiKankouApi: FerryApiProtocol {
                         returnRouteSchedules: returnSchedules
                     )
             }
-            completion(.success(routeScheduleList))
+            guard let route = routes.first(where: { $0.name.contains(routePrefix) }) else {
+                // TODO: do failure closure
+                return
+            }
+            completion(.success(route))
         }
 
         task.resume()
