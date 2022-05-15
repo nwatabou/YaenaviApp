@@ -20,7 +20,7 @@ public enum FerryStatus {
         case .outOfService:
             return Image(systemName: "multiply")
         case .unknown:
-            return Image(systemName: "triangle")
+            return Image(systemName: "minus")
         }
     }
 

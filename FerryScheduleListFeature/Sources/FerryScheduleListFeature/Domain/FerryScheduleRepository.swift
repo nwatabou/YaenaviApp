@@ -9,9 +9,12 @@ import Combine
 import Foundation
 
 import AppCore
+import FeatureInterfaces
 
 protocol FerryScheduleRepositoryProtocol {
-
+    func fetchSchedule(
+        routePrefix: String
+    ) -> AnyPublisher<FerryScheduleListViewData, Error>
 }
 
 final class FerryScheduleRepository: FerryScheduleRepositoryProtocol {
@@ -29,17 +32,32 @@ final class FerryScheduleRepository: FerryScheduleRepositoryProtocol {
     func fetchSchedule(
         routePrefix: String
     ) -> AnyPublisher<FerryScheduleListViewData, Error> {
-        Publishers
-            .Zip(
-                fetchAneiKankouSchedule(routePrefix: routePrefix),
-                fetchYaeyamaKankouSchedule(routePrefix: routePrefix)
-            )
-            .map { aneiKankouSchedule, yaeyamaKankouSchedule -> [FerryScheduleViewData] in
-                let _aneiKankouSchedule = aneiKankouSchedule
-                    .compactMap { schedule -> FerryScheduleViewData in
-                        
-                    }
+        fetchAneiKankouSchedule(routePrefix: routePrefix)
+            .map { aneiKankouSchedule -> FerryScheduleListViewData in
+                let aneiKankouOutwardSchedules = FerryScheduleListTranslator.translateToFerrySchedules(
+                    from: aneiKankouSchedule.outwardRouteSchedules,
+                    company: .aneiKankou
+                )
+                let aneiKankouReturnSchedules = FerryScheduleListTranslator.translateToFerrySchedules(
+                    from: aneiKankouSchedule.returnRouteSchedules,
+                    company: .aneiKankou
+                )
+
+                return FerryScheduleListViewData(
+                    name: aneiKankouSchedule.name,
+                    dateString: "", // TODO:
+                    statusInfo: "", // TODO:
+                    outwardRouteSchedule:.init(
+                            portName: aneiKankouSchedule.outwardRouteName,
+                            schedules: aneiKankouOutwardSchedules
+                        ),
+                    returnRouteSchedule: .init(
+                        portName: aneiKankouSchedule.returnRouteName,
+                        schedules: aneiKankouReturnSchedules
+                    )
+                )
             }
+            .eraseToAnyPublisher()
     }
 }
 

@@ -28,7 +28,7 @@ struct FerryRouteListView: View {
         NavigationView {
             List {
                 ForEach(viewModel.state.routeList, id: \.self) { viewData in
-                    NavigationLink(destination: featureProvider.build(FerryScheduleListViewRequest())) {
+                    NavigationLink(destination: featureProvider.build(FerryScheduleListViewRequest(routePrefix: viewData.route.prefix))) {
                         RouteView(
                             routeName: viewData.route.displayName,
                             status: viewData.status

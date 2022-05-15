@@ -95,7 +95,7 @@ public final class YaeyamaKankouApi: FerryApiProtocol {
             let routes: [RouteScheduleListResponse] = html
                 .xpath("//div[@class='local']/table")
                 .compactMap { table -> RouteScheduleListResponse? in
-                    var routeName: String = table.xpath("/thble/h3").first?.content ?? ""
+                    let routeName: String = table.xpath("/tr/th[@class='thble']/h3").first?.content ?? ""
                     var outwardRouteName: String = ""
                     var outwardSchedules: [RouteScheduleResponse] = []
                     var returnRouteName: String = ""

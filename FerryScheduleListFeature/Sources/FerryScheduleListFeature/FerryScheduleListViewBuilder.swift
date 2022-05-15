@@ -7,9 +7,24 @@
 
 import SwiftUI
 
+import AppCore
+
 public enum FerryScheduleListViewBuilder {
-    public static func build() -> some View {
-        let view = FerryScheduleListView()
+    public static func build(
+        routePrefix: String
+    ) -> some View {
+        let view = FerryScheduleListView(
+            viewModel: FerryScheduleListViewModel(
+                state: .init(),
+                dependency: .init(
+                    routePrefix: routePrefix,
+                    ferryScheduleRepository: FerryScheduleRepository(
+                        aneiKankouApi: AneiKankouApi(),
+                        yaeyamaKankouApi: YaeyamaKankouApi()
+                    )
+                )
+            )
+        )
 
         return view
     }

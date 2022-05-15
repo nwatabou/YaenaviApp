@@ -43,7 +43,9 @@ extension FeatureProvider {
 
 extension FeatureProvider {
     func build(_ request: FerryScheduleListViewRequest) -> AnyView {
-        let view = FerryScheduleListViewBuilder.build()
+        let view = FerryScheduleListViewBuilder.build(
+            routePrefix: request.routePrefix
+        )
         return AnyView(view)
     }
 }

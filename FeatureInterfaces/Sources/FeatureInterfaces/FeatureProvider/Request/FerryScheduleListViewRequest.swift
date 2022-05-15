@@ -8,5 +8,11 @@
 import Foundation
 
 public struct FerryScheduleListViewRequest {
-    public init() {}
+    public let routePrefix: String
+
+    public init(
+        routePrefix: String
+    ) {
+        self.routePrefix = routePrefix
+    }
 }

@@ -103,9 +103,9 @@ public final class AneiKankouApi: FerryApiProtocol {
                     let outwardRouteIndex: Int = 0
                     let returnRouteIndex: Int = 1
 
-                    guard let routeName = route.xpath("div[@class='condition_item_title']").first?.content,
-                          let outwardRouteName = route.xpath("div[@class='condition_item_detail flexbox']/div[@class='condition_item_port_title']")[outwardRouteIndex].content,
-                          let returnRouteName = route.xpath("div[@class='condition_item_detail flexbox']/div[@class='condition_item_port_title']")[returnRouteIndex].content else {
+                    guard let routeName = route.xpath("div[@class='condition_item_title']").first?.content?.trimmingCharacters(in: .whitespacesAndNewlines),
+                          let outwardRouteName = route.xpath("div[@class='condition_item_detail flexbox']/div[@class='condition_item_port_title']")[outwardRouteIndex].content?.trimmingCharacters(in: .whitespacesAndNewlines),
+                          let returnRouteName = route.xpath("div[@class='condition_item_detail flexbox']/div[@class='condition_item_port_title']")[returnRouteIndex].content?.trimmingCharacters(in: .whitespacesAndNewlines) else {
                               return nil
                           }
 
@@ -122,8 +122,8 @@ public final class AneiKankouApi: FerryApiProtocol {
                                               let statusMark = schedule.xpath("div[@class='condition_item_port_detail_status']").first?.content else { return }
                                         outwardSchedules.append(
                                             .init(
-                                                time: time,
-                                                status: statusMark
+                                                time: time.trimmingCharacters(in: .whitespacesAndNewlines),
+                                                status: statusMark.trimmingCharacters(in: .whitespacesAndNewlines)
                                             )
                                         )
                                     case returnRouteIndex:
@@ -131,8 +131,8 @@ public final class AneiKankouApi: FerryApiProtocol {
                                               let statusMark = schedule.xpath("div[@class='condition_item_port_detail_status']").first?.content else { return }
                                         returnSchedules.append(
                                             .init(
-                                                time: time,
-                                                status: statusMark
+                                                time: time.trimmingCharacters(in: .whitespacesAndNewlines),
+                                                status: statusMark.trimmingCharacters(in: .whitespacesAndNewlines)
                                             )
                                         )
                                     default:
