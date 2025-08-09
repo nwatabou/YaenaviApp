@@ -13,6 +13,7 @@ public protocol FerryApiProtocol {
     )
 
     func fetchRouteScheduleList(
-        completion: @escaping (Result<[RouteScheduleListResponse], Error>) -> Void
+        routePrefix: String,
+        completion: @escaping (Result<RouteScheduleListResponse, Error>) -> Void
     )
 }

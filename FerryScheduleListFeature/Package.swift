@@ -1,33 +1,37 @@
-// swift-tools-version:5.5
+// swift-tools-version: 5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "AppCore",
+    name: "FerryScheduleListFeature",
     platforms: [
         .iOS(.v15)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "AppCore",
-            targets: ["AppCore"]),
+            name: "FerryScheduleListFeature",
+            targets: ["FerryScheduleListFeature"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/tid-kijyun/Kanna.git", from: "5.2.2")
+        .package(name: "FeatureInterfaces", path: "../FeatureInterfaces"),
+        .package(name: "AppCore", path: "../AppCore"),
+        .package(url: "https://github.com/rechsteiner/Parchment", from: "3.2.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "AppCore",
+            name: "FerryScheduleListFeature",
             dependencies: [
-                "Kanna"
+                "FeatureInterfaces",
+                "AppCore",
+                "Parchment"
             ]
         ),
         .testTarget(
-            name: "AppCoreTests",
-            dependencies: ["AppCore"]),
+            name: "FerryScheduleListFeatureTests",
+            dependencies: ["FerryScheduleListFeature"]),
     ]
 )

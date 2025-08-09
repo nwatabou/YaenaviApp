@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
 
 /// 各航路の運行状況
 public enum FerryRouteStatus {
@@ -25,14 +25,14 @@ public enum FerryRouteStatus {
         }
     }
 
-    public var textColor: UIColor {
+    public var textColor: Color {
         switch self {
         case .normal:
-            return .systemBlue
+            return .blue
         case .partial:
-            return .systemYellow
+            return .yellow
         case .outOfService:
-            return .systemRed
+            return .red
         }
     }
 

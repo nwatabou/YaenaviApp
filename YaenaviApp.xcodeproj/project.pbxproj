@@ -21,6 +21,7 @@
 		3D96D70F27DCC3F7009D0202 /* FerryRouteListFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 3D96D70E27DCC3F7009D0202 /* FerryRouteListFeature */; };
 		3D96D71227DCC633009D0202 /* AppCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3D96D71127DCC633009D0202 /* AppCore */; };
 		3DE587742802C20200947CFA /* FeatureInterfaces in Frameworks */ = {isa = PBXBuildFile; productRef = 3DE587732802C20200947CFA /* FeatureInterfaces */; };
+		3DEFC548282139BF00B0118B /* FerryScheduleListFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 3DEFC547282139BF00B0118B /* FerryScheduleListFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3D96D70D27DCC3B5009D0202 /* FerryRouteListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FerryRouteListFeature; sourceTree = "<group>"; };
 		3D96D71027DCC604009D0202 /* AppCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppCore; sourceTree = "<group>"; };
 		3DE587722802AE0000947CFA /* FeatureInterfaces */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FeatureInterfaces; sourceTree = "<group>"; };
+		3DEFC5462821393A00B0118B /* FerryScheduleListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FerryScheduleListFeature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				3D96D70F27DCC3F7009D0202 /* FerryRouteListFeature in Frameworks */,
 				3DE587742802C20200947CFA /* FeatureInterfaces in Frameworks */,
 				3D96D70C27DCC20C009D0202 /* OperationStatusFeature in Frameworks */,
+				3DEFC548282139BF00B0118B /* FerryScheduleListFeature in Frameworks */,
 				3D96D71227DCC633009D0202 /* AppCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		3D1A6A732765C84800748966 = {
 			isa = PBXGroup;
 			children = (
+				3DEFC5462821393A00B0118B /* FerryScheduleListFeature */,
 				3DE587722802AE0000947CFA /* FeatureInterfaces */,
 				3D96D70D27DCC3B5009D0202 /* FerryRouteListFeature */,
 				3D96D70A27DCC1D1009D0202 /* OperationStatusFeature */,
@@ -183,6 +187,7 @@
 				3D96D70E27DCC3F7009D0202 /* FerryRouteListFeature */,
 				3D96D71127DCC633009D0202 /* AppCore */,
 				3DE587732802C20200947CFA /* FeatureInterfaces */,
+				3DEFC547282139BF00B0118B /* FerryScheduleListFeature */,
 			);
 			productName = YaenaviApp;
 			productReference = 3D1A6A7C2765C84900748966 /* YaenaviApp.app */;
@@ -258,6 +263,7 @@
 			mainGroup = 3D1A6A732765C84800748966;
 			packageReferences = (
 				3D5D1334277DDD7500668E32 /* XCRemoteSwiftPackageReference "Kanna" */,
+				3D5813B42823B8DC00DA0106 /* XCRemoteSwiftPackageReference "Parchment" */,
 			);
 			productRefGroup = 3D1A6A7D2765C84900748966 /* Products */;
 			projectDirPath = "";
@@ -665,6 +671,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3D5813B42823B8DC00DA0106 /* XCRemoteSwiftPackageReference "Parchment" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rechsteiner/Parchment";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		3D5D1334277DDD7500668E32 /* XCRemoteSwiftPackageReference "Kanna" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tid-kijyun/Kanna.git";
@@ -691,6 +705,10 @@
 		3DE587732802C20200947CFA /* FeatureInterfaces */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FeatureInterfaces;
+		};
+		3DEFC547282139BF00B0118B /* FerryScheduleListFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FerryScheduleListFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

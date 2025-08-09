@@ -9,9 +9,12 @@ import Foundation
 import SwiftUI
 
 import AppCore
+import FeatureInterfaces
 
 public enum FerryRouteListViewBuilder {
-    public static func build() -> some View {
+    public static func build(
+        featureProvider: FeatureProviderProtocol
+    ) -> some View {
         let ferryRouteRepository = FerryRouteRepository(
             aneiKankouApi: AneiKankouApi(),
             yaeyamaKankouApi: YaeyamaKankouApi()
@@ -20,7 +23,10 @@ public enum FerryRouteListViewBuilder {
             state: .init(),
             dependency: .init(ferryRouteRepository: ferryRouteRepository)
         )
-        let view = FerryRouteListView(viewModel: viewModel)
+        let view = FerryRouteListView(
+            featureProvider: featureProvider,
+            viewModel: viewModel
+        )
 
         return view
     }

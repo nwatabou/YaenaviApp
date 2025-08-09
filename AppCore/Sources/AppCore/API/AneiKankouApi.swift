@@ -77,7 +77,8 @@ public final class AneiKankouApi: FerryApiProtocol {
     }
 
     public func fetchRouteScheduleList(
-        completion: @escaping (Result<[RouteScheduleListResponse], Error>) -> Void
+        routePrefix: String,
+        completion: @escaping (Result<RouteScheduleListResponse, Error>) -> Void
     ) {
         guard let aneiKankouUrl = URL(string: Const.aneiKankouDataUrlString) else {
             // TODO: do failure closure
@@ -96,15 +97,15 @@ public final class AneiKankouApi: FerryApiProtocol {
                     return
             }
 
-            let routeScheduleList: [RouteScheduleListResponse] = html
+            let routes: [RouteScheduleListResponse] = html
                 .xpath("//div[@class='condition_item']")
                 .compactMap { route in
                     let outwardRouteIndex: Int = 0
                     let returnRouteIndex: Int = 1
 
-                    guard let routeName = route.xpath("div[@class='condition_item_title']").first?.content,
-                          let outwardRouteName = route.xpath("div[@class='condition_item_detail flexbox']/div[@class='condition_item_port_title']")[outwardRouteIndex].content,
-                          let returnRouteName = route.xpath("div[@class='condition_item_detail flexbox']/div[@class='condition_item_port_title']")[returnRouteIndex].content else {
+                    guard let routeName = route.xpath("div[@class='condition_item_title']").first?.content?.trimmingCharacters(in: .whitespacesAndNewlines),
+                          let outwardRouteName = route.xpath("div[@class='condition_item_detail flexbox']/div[@class='condition_item_port_title']")[outwardRouteIndex].content?.trimmingCharacters(in: .whitespacesAndNewlines),
+                          let returnRouteName = route.xpath("div[@class='condition_item_detail flexbox']/div[@class='condition_item_port_title']")[returnRouteIndex].content?.trimmingCharacters(in: .whitespacesAndNewlines) else {
                               return nil
                           }
 
@@ -121,8 +122,8 @@ public final class AneiKankouApi: FerryApiProtocol {
                                               let statusMark = schedule.xpath("div[@class='condition_item_port_detail_status']").first?.content else { return }
                                         outwardSchedules.append(
                                             .init(
-                                                time: time,
-                                                status: statusMark
+                                                time: time.trimmingCharacters(in: .whitespacesAndNewlines),
+                                                status: statusMark.trimmingCharacters(in: .whitespacesAndNewlines)
                                             )
                                         )
                                     case returnRouteIndex:
@@ -130,8 +131,8 @@ public final class AneiKankouApi: FerryApiProtocol {
                                               let statusMark = schedule.xpath("div[@class='condition_item_port_detail_status']").first?.content else { return }
                                         returnSchedules.append(
                                             .init(
-                                                time: time,
-                                                status: statusMark
+                                                time: time.trimmingCharacters(in: .whitespacesAndNewlines),
+                                                status: statusMark.trimmingCharacters(in: .whitespacesAndNewlines)
                                             )
                                         )
                                     default:
@@ -148,7 +149,11 @@ public final class AneiKankouApi: FerryApiProtocol {
                         returnRouteSchedules: returnSchedules
                     )
             }
-            completion(.success(routeScheduleList))
+            guard let route = routes.first(where: { $0.name.contains(routePrefix) }) else {
+                // TODO: do failure closure
+                return
+            }
+            completion(.success(route))
         }
 
         task.resume()

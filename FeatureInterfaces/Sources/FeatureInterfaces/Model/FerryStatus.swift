@@ -5,8 +5,7 @@
 //  Created by nakanishi wataru on 2022/04/10.
 //
 
-import Foundation
-import UIKit
+import SwiftUI
 
 /// 便ごとの運行状況
 public enum FerryStatus {
@@ -14,25 +13,25 @@ public enum FerryStatus {
     case outOfService
     case unknown
 
-    public var displayMark: UIImage? {
+    public var displayMark: Image {
         switch self {
         case .normal:
-            return UIImage(systemName: "circle")
+            return Image(systemName: "circle")
         case .outOfService:
-            return UIImage(systemName: "multiply")
+            return Image(systemName: "multiply")
         case .unknown:
-            return UIImage(systemName: "minus")
+            return Image(systemName: "minus")
         }
     }
 
-    public var textColor: UIColor {
+    public var textColor: Color {
         switch self {
         case .normal:
-            return .systemBlue
+            return .blue
         case .outOfService:
-            return .systemRed
+            return .red
         case .unknown:
-            return .systemGray
+            return .gray
         }
     }
 

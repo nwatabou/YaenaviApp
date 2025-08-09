@@ -74,7 +74,8 @@ public final class YaeyamaKankouApi: FerryApiProtocol {
     }
 
     public func fetchRouteScheduleList(
-        completion: @escaping (Result<[RouteScheduleListResponse], Error>) -> Void
+        routePrefix: String,
+        completion: @escaping (Result<RouteScheduleListResponse, Error>) -> Void
     ) {
         guard let url = URL(string: Const.yaeyamaKankouScheduleDataUrlString) else {
             // TODO: do failure closure
@@ -94,7 +95,7 @@ public final class YaeyamaKankouApi: FerryApiProtocol {
             let routes: [RouteScheduleListResponse] = html
                 .xpath("//div[@class='local']/table")
                 .compactMap { table -> RouteScheduleListResponse? in
-                    var routeName: String = table.xpath("/thble/h3").first?.content ?? ""
+                    let routeName: String = table.xpath("/tr/th[@class='thble']/h3").first?.content ?? ""
                     var outwardRouteName: String = ""
                     var outwardSchedules: [RouteScheduleResponse] = []
                     var returnRouteName: String = ""
@@ -162,7 +163,11 @@ public final class YaeyamaKankouApi: FerryApiProtocol {
                         returnRouteSchedules: returnRouteSchedules
                     )
             }
-            completion(.success(routes))
+            guard let route = routes.first(where: { $0.name.contains(routePrefix) }) else {
+                // TODO: do failure closure
+                return
+            }
+            completion(.success(route))
         }
         task.resume()
     }

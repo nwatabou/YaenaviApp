@@ -48,24 +48,56 @@ public enum FerryRoute {
         }
     }
 
+    /// 各航路名の Prefix
+    public var prefix: String {
+        switch self {
+        case .taketomi:
+            return Const.taketomiPrefix
+        case .kohama:
+            return Const.kohamaPrefix
+        case .kuroshima:
+            return Const.kuroshimaPrefix
+        case .oohara:
+            return Const.ooharaPrefix
+        case .uehara:
+            return Const.ueharaPrefix
+        case .hatoma:
+            return Const.hatomaPrefix
+        case .hateruma:
+            return Const.haterumaPrefix
+        }
+    }
+
     public init?(rawValue: String) {
         switch rawValue {
-        case _ where rawValue.contains("竹富"):
+        case _ where rawValue.contains(Const.taketomiPrefix):
             self = .taketomi
-        case _ where rawValue.contains("小浜"):
+        case _ where rawValue.contains(Const.kohamaPrefix):
             self = .kohama
-        case _ where rawValue.contains("黒島"):
+        case _ where rawValue.contains(Const.kuroshimaPrefix):
             self = .kuroshima
-        case _ where rawValue.contains("大原"):
+        case _ where rawValue.contains(Const.ooharaPrefix):
             self = .oohara
-        case _ where rawValue.contains("上原"):
+        case _ where rawValue.contains(Const.ueharaPrefix):
             self = .uehara
-        case _ where rawValue.contains("鳩間"):
+        case _ where rawValue.contains(Const.hatomaPrefix):
             self = .hatoma
-        case _ where rawValue.contains("波照間"):
+        case _ where rawValue.contains(Const.haterumaPrefix):
             self = .hateruma
         default:
             return nil
         }
+    }
+}
+
+extension FerryRoute {
+    private enum Const {
+        static let taketomiPrefix = "竹富"
+        static let kohamaPrefix = "小浜"
+        static let kuroshimaPrefix = "黒島"
+        static let ooharaPrefix = "大原"
+        static let ueharaPrefix = "上原"
+        static let hatomaPrefix = "鳩間"
+        static let haterumaPrefix = "波照間"
     }
 }

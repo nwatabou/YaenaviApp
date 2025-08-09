@@ -9,6 +9,15 @@
           "revision": "bf19cf5f5fff3924cc2b63dd32732bce28b4c748",
           "version": null
         }
+      },
+      {
+        "package": "Parchment",
+        "repositoryURL": "https://github.com/rechsteiner/Parchment",
+        "state": {
+          "branch": "main",
+          "revision": "cad6924f8a292eecaedc1bdefb57006f7979b9eb",
+          "version": null
+        }
       }
     ]
   },
