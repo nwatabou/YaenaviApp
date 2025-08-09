@@ -12,22 +12,22 @@ import AppCore
 import FeatureInterfaces
 
 public enum FerryRouteListViewBuilder {
-    public static func build(
-        featureProvider: FeatureProviderProtocol
-    ) -> some View {
-        let ferryRouteRepository = FerryRouteRepository(
-            aneiKankouApi: AneiKankouApi(),
-            yaeyamaKankouApi: YaeyamaKankouApi()
-        )
-        let viewModel = FerryRouteListViewModel(
-            state: .init(),
-            dependency: .init(ferryRouteRepository: ferryRouteRepository)
-        )
-        let view = FerryRouteListView(
-            featureProvider: featureProvider,
-            viewModel: viewModel
-        )
-
-        return view
-    }
+  public static func build(
+    featureProvider: FeatureProviderProtocol
+  ) -> some View {
+    let ferryRouteRepository = FerryRouteRepository(
+      aneiKankouApi: AneiKankouApi(),
+      yaeyamaKankouApi: YaeyamaKankouApi()
+    )
+    let viewModel = FerryRouteListViewModel(
+      state: .init(),
+      dependency: .init(ferryRouteRepository: ferryRouteRepository)
+    )
+    let view = FerryRouteListView(
+      featureProvider: featureProvider,
+      viewModel: viewModel
+    )
+    
+    return view
+  }
 }

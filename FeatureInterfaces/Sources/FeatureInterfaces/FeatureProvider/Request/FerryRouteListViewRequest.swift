@@ -8,5 +8,5 @@
 import Foundation
 
 public struct FerryRouteListViewRequest {
-    public init() {}
+  public init() {}
 }

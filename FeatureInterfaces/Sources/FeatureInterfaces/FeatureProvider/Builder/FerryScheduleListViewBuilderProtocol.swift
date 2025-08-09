@@ -8,5 +8,5 @@
 import SwiftUI
 
 public protocol FerryScheduleListViewBuilderProtocol {
-    func build(_ request: FerryScheduleListViewRequest) -> AnyView
+  func build(_ request: FerryScheduleListViewRequest) -> AnyView
 }

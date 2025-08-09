@@ -8,5 +8,5 @@
 import SwiftUI
 
 public protocol OperationStatusViewBuilderProtocol {
-    func build(_ request: OperationStatusViewRequest) -> AnyView
+  func build(_ request: OperationStatusViewRequest) -> AnyView
 }

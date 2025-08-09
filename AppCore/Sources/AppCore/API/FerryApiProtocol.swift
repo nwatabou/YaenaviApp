@@ -8,12 +8,12 @@
 import Foundation
 
 public protocol FerryApiProtocol {
-    func fetchRouteStatuses(
-        completion: @escaping (Result<RouteStatusListResponse, Error>) -> Void
-    )
-
-    func fetchRouteScheduleList(
-        routePrefix: String,
-        completion: @escaping (Result<RouteScheduleListResponse, Error>) -> Void
-    )
+  func fetchRouteStatuses(
+    completion: @escaping (Result<RouteStatusListResponse, Error>) -> Void
+  )
+  
+  func fetchRouteScheduleList(
+    routePrefix: String,
+    completion: @escaping (Result<RouteScheduleListResponse, Error>) -> Void
+  )
 }
