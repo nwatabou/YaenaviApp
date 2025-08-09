@@ -11,12 +11,12 @@ import FeatureInterfaces
 
 @main
 struct YaenaviApp: App {
-
-    private let featureProvider: FeatureProviderProtocol = FeatureProvider()
-
-    var body: some Scene {
-        WindowGroup {
-            ContentView(featureProvider: featureProvider)
-        }
+  
+  private let featureProvider: FeatureProviderProtocol = FeatureProvider()
+  
+  var body: some Scene {
+    WindowGroup {
+      ContentView(featureProvider: featureProvider)
     }
+  }
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 public struct OperationStatusViewRequest {
-    public init() {}
+  public init() {}
 }
