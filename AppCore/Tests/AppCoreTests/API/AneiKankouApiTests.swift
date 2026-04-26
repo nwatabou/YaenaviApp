@@ -26,6 +26,21 @@ struct AneiKankouApiTests {
   }
 
   @Test
+  func test_fetchRouteList() async throws {
+    let response = try await api.fetchRouteList()
+
+    #expect(response.routes.count > 0, "航路が1つ以上取得できること")
+
+    for route in response.routes {
+      #expect(!route.name.isEmpty, "航路名が空でないこと")
+      #expect(
+        route.status == .normal || route.status == .partial || route.status == .suspension,
+        "ステータスが期待される値のいずれかであること"
+      )
+    }
+  }
+
+  @Test
   func test_fetchRouteScheduleList() async throws {
     let response = try await api.fetchRouteScheduleList(routePrefix: "竹富")
 
