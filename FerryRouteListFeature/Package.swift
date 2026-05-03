@@ -15,8 +15,7 @@ let package = Package(
             targets: ["FerryRouteListFeature"]),
     ],
     dependencies: [
-        .package(name: "FeatureInterfaces", path: "../FeatureInterfaces"),
-        .package(name: "AppCore", path: "../AppCore")
+        .package(name: "FeatureInterfaces", path: "../FeatureInterfaces")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -24,7 +23,7 @@ let package = Package(
         .target(
             name: "FerryRouteListFeature",
             dependencies: [
-                "AppCore"
+                "FeatureInterfaces"
             ]
         ),
         .testTarget(

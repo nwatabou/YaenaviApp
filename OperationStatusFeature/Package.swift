@@ -22,7 +22,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "OperationStatusFeature",
-            dependencies: []),
+            dependencies: [
+              "FeatureInterfaces"
+            ]),
         .testTarget(
             name: "OperationStatusFeatureTests",
             dependencies: ["OperationStatusFeature"]),
